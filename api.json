@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "author": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "age": { "type": "number" },
+        "gender": { "enum": ["male", "female", "other"] }
+      },
+      "required": ["name", "age", "gender"]
+    },
+    "title": { "type": "string" },
+    "publisher": { "type": "string" }
+  }
+}
