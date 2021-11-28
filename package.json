@@ -1,8 +1,9 @@
 {
-  "name": "quick-ts-inteface-until",
+  "name": "@edison/quick-ts-inteface-until",
   "description": "a tool for quickly generating ts interface",
   "version": "1.0.0",
   "main": "dist/bundle.min.js",
+  "module": "dist/bundle.min.js",
   "license": "MIT",
   "scripts": {
     "start": "node src/index.js --trace-warnings",

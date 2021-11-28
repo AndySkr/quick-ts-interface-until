@@ -53,6 +53,9 @@ function queryJson(url) {
  * @param {string} url
  */
 async function generInteface(url) {
+  if (!url) {
+    return;
+  }
   try {
     await queryJson(url);
   } catch (error) {
@@ -60,7 +63,12 @@ async function generInteface(url) {
   }
 
   try {
-    const { lines } = await quicktypeJSONS("Book", JSON.stringify(initJson));
+    let name = url?.split("/").slice(-1)[0];
+    const TypeName = name?.charAt(0)?.toUpperCase() + name.slice(1);
+    const { lines } = await quicktypeJSONS(
+      TypeName || "Type",
+      JSON.stringify(initJson)
+    );
     const source = lines?.join("\n");
     fs.writeFile("type.d.ts", source, (err) => {
       if (err) throw err;
