@@ -5,6 +5,7 @@
   "main": "dist/bundle.min.js",
   "module": "dist/bundle.min.js",
   "license": "MIT",
+  "author": "Edison",
   "scripts": {
     "start": "node src/index.js --trace-warnings",
     "build": "rm -rf dist && rollup -c"
