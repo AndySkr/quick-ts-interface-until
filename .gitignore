@@ -2,3 +2,5 @@
 type.d.ts
 .idea
 yarn.lock
+dist
+index.js
