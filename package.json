@@ -1,5 +1,5 @@
 {
-  "name": "@edison/quick-ts-inteface-until",
+  "name": "@edison/to-ts-inteface-until",
   "description": "a tool for quickly generating ts interface",
   "version": "1.0.0",
   "main": "dist/bundle.min.js",
