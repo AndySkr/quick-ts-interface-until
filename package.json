@@ -1,24 +1,29 @@
 {
-  "name": "@edison/untils-to-ts-inteface",
+  "name": "@edison_zxg/untils-to-ts-inteface",
   "description": "a tool for quickly generating ts interface",
   "version": "1.0.0",
   "main": "dist/bundle.min.js",
   "module": "dist/bundle.min.js",
   "license": "MIT",
   "author": "Edison",
+  "files": [
+    "dist/",
+    "package.json",
+    "readme.md"
+  ],
   "scripts": {
     "start": "node src/index.js --trace-warnings",
     "build": "rm -rf dist && rollup -c"
   },
   "dependencies": {
     "axios": "^0.22.0",
-    "quicktype-core": "^6.0.70"
+    "quicktype-core": "^6.0.70",
+    "@babel/runtime": "^7.15.4"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/plugin-transform-runtime": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
-    "@babel/runtime": "^7.15.4",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.5",

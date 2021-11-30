@@ -5,10 +5,12 @@
 ##### 1. 使用
 
 ```
-const generInteface = require("@edison/quick-ts-inteface-until");
 
-// 传入可以有返回值的后端接口即可,比如接口文档上的mock接口
-generInteface(url);
+    const generInteface = require("@edison_zxg/untils-to-ts-inteface");
+
+    // 传入可以有返回值的后端接口即可,比如接口文档上的mock接口
+    generInteface('http://www.xxxx.com/api/a/b/c');
+
 
 ```
 
