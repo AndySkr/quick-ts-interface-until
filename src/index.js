@@ -42,7 +42,8 @@ function queryJson(url) {
         reslove(r);
       })
       .catch(function (err) {
-        console.log(err);
+        console.log(chalk.keyword("red")("=========》接口请求异常"));
+        throw err;
         reject(err);
       });
   });
@@ -56,13 +57,13 @@ async function generInteface(url) {
   if (!url) {
     return;
   }
-  try {
-    await queryJson(url);
-  } catch (error) {
-    console.log(error);
-  }
+  // try {
+  // } catch (error) {
+  //   console.log(error);
+  // }
 
   try {
+    await queryJson(url);
     let name = url?.split("/").slice(-1)[0];
     const TypeName = name?.charAt(0)?.toUpperCase() + name.slice(1);
     const { lines } = await quicktypeJSONS(
@@ -78,8 +79,8 @@ async function generInteface(url) {
         )
       );
     });
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    throw err;
   }
 }
 module.exports = generInteface;
